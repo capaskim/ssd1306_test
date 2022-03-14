@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <Wire.h>               // Only needed for Arduino 1.6.5 and earlier
 #include "SSD1306Wire.h"
+#include "dialog_14.h"
 
 #define SDA 10
 #define SCL 9
@@ -18,6 +19,7 @@ void setup() {
   display.init();
 
   display.flipScreenVertically();
+  display.setFont(Dialog_plain_14);
 
   char buffer[50];
   for (int i = 0; i<=100; i++) {
